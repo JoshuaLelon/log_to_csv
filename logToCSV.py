@@ -12,12 +12,13 @@ with open("eventlog.txt") as file:
 	print(type(lines))
 	
 with open("eventlog.txt") as file:
-	while True:
+	eventCount = 0
+	while eventCount < numEvents:
 		line = file.readline().strip()
-		if line == '':
-			# either end of file or just a blank line.....
-			# we'll assume EOF, because we don't have a choice with the while loop!
-			break
+		isBeginning = re.findall("(Event\[)[0-9]+(\])", line) == 1
+		if (isBeginning):
+			eventCount+= 1
+		print(isBeginning)
 		print(line)
 
 	# for line in file:
