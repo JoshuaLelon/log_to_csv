@@ -15,11 +15,14 @@ with open("eventlog.txt") as file:
 	eventCount = 0
 	while eventCount < numEvents:
 		line = file.readline().strip()
-		isBeginning = re.findall("(Event\[)[0-9]+(\])", line) == 1
+		eventsFound = re.findall("(Event\[)[0-9]+(\])", line) 
+		print(eventsFound)
+		print(line)
+		isBeginning = len(eventsFound) == 1
 		if (isBeginning):
 			eventCount+= 1
-		print(isBeginning)
-		print(line)
+		# print(isBeginning)
+		# print(line)
 
 	# for line in file:
 		#stripped_line = line.rstrip()
