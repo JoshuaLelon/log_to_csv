@@ -1,4 +1,5 @@
 import re
+import json
 
 log = []
 numEvents = 0
@@ -81,3 +82,6 @@ with open("eventlog.txt") as file:
 		# print(line)
 		# print(line)
 		# print("---------------------------")
+		
+with open('result.json', 'w') as fp:
+    json.dump(log, fp)
