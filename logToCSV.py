@@ -1,11 +1,17 @@
 import re
 
+log = []
+numEvents = 0
+line = []
+
 with open("eventlog.txt") as file:
 	lines = file.read()
 	eventsList = re.findall("(Event\[)[0-9]+(\])", lines)
 	numEvents = len(eventsList)
 	print(numEvents)
-	log = []
+	print(type(lines))
+	
+with open("eventlog.txt") as file:
 	while True:
 		line = file.readline().strip()
 		if line == '':
