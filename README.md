@@ -1,7 +1,9 @@
 # log_to_csv
 This is a script I use to parse my windows event log file into a csv / excel readable format for data analysis.
 
-To run it, using the command prompt, clone the project, navigate to the project directory, and then run the following command:
+# To use it:
+
+Open the command prompt, clone the project, navigate to the project directory, and then run the following command:
 
 python create_log.py
 
