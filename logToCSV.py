@@ -1,14 +1,11 @@
 import re
 import json
+import csv
+import events
 
+eventsListFileName = "eventlog.txt"
 log = []
-numEvents = 0
-
-with open("eventlog.txt") as file:
-	lines = file.read()
-	eventsList = re.findall("(Event\[)[0-9]+(\])", lines)
-	numEvents = len(eventsList)
-	print(numEvents)
+numEvents = events.getNumEvents(eventsListFileName)
 	
 with open("eventlog.txt") as file:
 	eventCount = 0
@@ -74,7 +71,7 @@ with open("eventlog.txt") as file:
 			log.append(event)
 		# print(isBeginning)
 		# print(line)
-	print(log)
+	# print(log)
 	# for line in file:
 		#stripped_line = line.rstrip()
 		# log.append(stripped_line)
