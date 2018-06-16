@@ -1,21 +1,22 @@
 # log_to_csv
-This is a script I use to parse my windows event log file into a csv / excel readable format for data analysis.
+
+This is a script I use to parse my Windows 10 event log file into a csv / excel readable format for data analysis.
 
 # To use it:
 
 Open the command prompt, clone the project, navigate to the project directory, and then run the following command:
 
-python create_log.py
+> python create_log.py
 
 That should run the windows command to create your event log file.
 
 After the event log file is created, move it into the project directory you just cloned, and run: 
 
-python logToCSV.py
+> python logToCSV.py
 
 This will create both a JSON and CSV file with all of the data neatly parsed.
 
-I designed this to use on Windows 10, but I think it'll work on 8 and possibly 7. The python definitely will (since it depends on having python installed, regardless of OS), I'm just hesistant about create_log.py - I haven't tested it.
+I designed this to use on Windows 10, but I think it'll work on 8 and possibly 7. The python definitely will (since it depends on having python installed, regardless of OS), but I'm hesistant about create_log.py - I haven't tested it.
 
 Future Iterations may include:
 - logic to store ALL of the description for a given event, instead of just the first line of each event from the eventlog.txt file.
